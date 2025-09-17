@@ -62,7 +62,6 @@ main {
 h1 {
   font-size: 2.4rem;
   font-weight: var(--font-weight-bold);
-  margin-bottom: 2.4rem;
   opacity: 0.8;
 }
 
@@ -101,12 +100,12 @@ p {
   height: 20rem;
 }
 .score {
-  font-size: 6.5rem;
+  font-size: clamp(3.2rem, 2.038rem + 4.958vw, 6.5rem);
   font-weight: var(--font-weight-heavy);
 }
 
 strong {
-  font-size: 3.6rem;
+  font-size: clamp(2.2rem, 1.707rem + 2.103vw, 3.6rem);
   font-weight: var(--font-weight-bold);
   margin-bottom: 1.2rem;
 }
@@ -178,12 +177,37 @@ em {
 
 /*====== BUTTON ======*/
 button {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size);
   color: var(--White);
   border-radius: 2rem;
   border: none;
   background-color: var(--Dark-gray-blue);
   padding: 1rem;
   cursor: pointer;
+}
+
+@media (max-width: 475px) {
+  main {
+    width: 100%;
+    height: auto;
+  }
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .result {
+    width: 100%;
+    border-radius: 0 0 2rem 2rem;
+    padding: 1.5rem;
+  }
+  .result-score {
+    width: 15rem;
+    height: 15rem;
+  }
+  .summary {
+    border-radius: 0;
+    margin: -2rem 0 0 0;
+  }
 }
 
 /*====== FOOTER ======*/
