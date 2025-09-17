@@ -9,9 +9,13 @@
 :root {
   /*====== COLOR ======*/
   --Light-red: hsl(0, 100%, 67%);
+  --light-red-gd: hsla(0, 100%, 67%, 0.05);
   --Orangey-yellow: hsl(39, 100%, 56%);
+  --Orangey-yellow-gd: hsla(39, 100%, 56%, 0.05);
   --Green-teal: hsl(166, 100%, 37%);
+  --Green-teal-gd: hsla(166, 100%, 37%, 0.05);
   --Cobalt-blue: hsl(234, 85%, 45%);
+  --Cobalt-blue-gd: hsla(234, 85%, 45%, 0.05);
   /*====== GRADIENTS ======*/
   --Light-slate-blue: hsl(252, 100%, 67%); /*background*/
   --Light-royal-blue: hsl(241, 81%, 54%); /*background*/
@@ -25,6 +29,7 @@
   /*====== FONT ======*/
   font-size: 62.5%; /*10px/16px = 62.5%*/
   font-family: "Hanken Grotesk", sans-serif;
+  --font-size: 1.8rem;
   --font-weight: 500;
   --font-weight-bold: 700;
   --font-weight-heavy: 800;
@@ -35,6 +40,153 @@
   src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format("truetype");
 }
 
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Pale-blue);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 1rem;
+  font-size: var(--font-size);
+  max-width: 70rem;
+}
+
+/*======  RESULT ======*/
+h1 {
+  font-size: 2.4rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 2.4rem;
+  opacity: 0.8;
+}
+
+p {
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+.result {
+  display: grid;
+  place-items: center;
+  gap: 2.4rem;
+  text-align: center;
+  padding: 4.5rem;
+  border-radius: 2.5rem;
+  background: linear-gradient(
+    to bottom,
+    var(--Light-slate-blue),
+    var(--Light-royal-blue)
+  );
+  color: var(--White);
+  z-index: 100;
+}
+.result-score {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to bottom,
+    var(--Violet-blue),
+    var(--Persian-blue)
+  );
+  border-radius: 50%;
+  width: 20rem;
+  height: 20rem;
+}
+.score {
+  font-size: 6.5rem;
+  font-weight: var(--font-weight-heavy);
+}
+
+strong {
+  font-size: 3.6rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1.2rem;
+}
+
+/*====== SUMMARY ======*/
+.summary {
+  background-color: var(--White);
+  display: grid;
+  grid-row: auto;
+  gap: 2.4rem;
+  padding: 4.5rem;
+  color: var(--Dark-gray-blue);
+  border-radius: 0 2.5rem 2.5rem 0;
+  margin-left: -1.5rem;
+}
+summary h1 {
+  font-size: 2.4rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 0;
+}
+.summary article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.Reaction {
+  background-color: var(--light-red-gd);
+}
+.Reaction div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--Light-red);
+}
+.Memory {
+  background-color: var(--Orangey-yellow-gd);
+}
+.Memory div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--Orangey-yellow);
+}
+.Verbal {
+  background-color: var(--Green-teal-gd);
+}
+.Verbal div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--Green-teal);
+}
+.Visual {
+  background-color: var(--Cobalt-blue-gd);
+}
+.Visual div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--Cobalt-blue);
+}
+
+em {
+  font-weight: var(--font-weight-bold);
+  font-style: none;
+}
+
+/*====== BUTTON ======*/
+button {
+  color: var(--White);
+  border-radius: 2rem;
+  border: none;
+  background-color: var(--Dark-gray-blue);
+  padding: 1rem;
+  cursor: pointer;
+}
+
+/*====== FOOTER ======*/
 .attribution {
   font-size: 11px;
   text-align: center;
