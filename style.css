@@ -185,6 +185,17 @@ button {
   background-color: var(--Dark-gray-blue);
   padding: 1rem;
   cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+button:hover {
+  background: linear-gradient(
+    to bottom,
+    var(--Light-slate-blue),
+    var(--Light-royal-blue)
+  );
+}
+button:active {
+  transform: scale(1.05);
 }
 
 @media (max-width: 475px) {
