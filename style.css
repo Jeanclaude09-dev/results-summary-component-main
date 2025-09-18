@@ -156,8 +156,16 @@ button:active {
   transform: scale(1.05);
 }
 
+/*====== FOOTER ======*/
 footer {
   background-color: var(--Pale-blue);
+}
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 @media (max-width: 475px) {
@@ -184,13 +192,4 @@ footer {
   footer {
     background-color: var(--White);
   }
-}
-
-/*====== FOOTER ======*/
-.attribution {
-  font-size: 1.1rem;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
 }
