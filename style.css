@@ -74,10 +74,10 @@ strong {
   display: grid;
   grid-row: auto;
   gap: 2.4rem;
-  padding: 4.5rem;
+  padding: 4.5rem 4.5rem 4.5rem 4.9rem;
   color: var(--Dark-gray-blue);
   border-radius: 0 2.5rem 2.5rem 0;
-  margin-left: -1.5rem;
+  margin-left: -2.2rem;
 }
 summary h1 {
   font-size: 2.4rem;
