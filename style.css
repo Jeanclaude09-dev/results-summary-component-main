@@ -156,6 +156,10 @@ button:active {
   transform: scale(1.05);
 }
 
+footer {
+  background-color: var(--Pale-blue);
+}
+
 @media (max-width: 475px) {
   main {
     width: 100%;
@@ -177,7 +181,7 @@ button:active {
     border-radius: 0;
     margin: -2rem 0 0 0;
   }
-  .attribution {
+  footer {
     background-color: var(--White);
   }
 }
@@ -186,7 +190,6 @@ button:active {
 .attribution {
   font-size: 1.1rem;
   text-align: center;
-  background-color: var(--Pale-blue);
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
